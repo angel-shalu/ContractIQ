@@ -1,5 +1,9 @@
 # ContractIQ
 
+🌐 **Live Web Application:** [https://contract-iq-deployment-941uai9c7-angel-shalus-projects.vercel.app](https://contract-iq-deployment-941uai9c7-angel-shalus-projects.vercel.app)
+
+[![Vercel Live Demo](https://img.shields.com/badge/Vercel-Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://contract-iq-deployment-941uai9c7-angel-shalus-projects.vercel.app)
+
 ContractIQ Folder contains:
 
 - `client/` — React frontend
