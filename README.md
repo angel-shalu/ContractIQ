@@ -1,8 +1,13 @@
-# ContractIQ
+# 🚀 ContractIQ - AI-powered Contract & Obligation Management System
 
-🌐 **Live Web Application:** [https://contract-iq-deployment-941uai9c7-angel-shalus-projects.vercel.app](https://contract-iq-deployment-941uai9c7-angel-shalus-projects.vercel.app)
+## 🌐 Live Deployments
 
-[![Vercel Live Demo](https://img.shields.com/badge/Vercel-Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://contract-iq-deployment-941uai9c7-angel-shalus-projects.vercel.app)
+- 🖥️ **Frontend Web Application (Vercel):** [https://contract-iq-deployment-941uai9c7-angel-shalus-projects.vercel.app](https://contract-iq-deployment-941uai9c7-angel-shalus-projects.vercel.app)
+- ⚙️ **Backend API Service (Render):** [https://contractiq-deployment.onrender.com](https://contractiq-deployment.onrender.com)
+- 📚 **Interactive API Docs (Swagger UI):** [https://contractiq-deployment.onrender.com/docs](https://contractiq-deployment.onrender.com/docs)
+
+[![Frontend Vercel](https://img.shields.com/badge/Vercel-Frontend_Live-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://contract-iq-deployment-941uai9c7-angel-shalus-projects.vercel.app)
+[![Backend Render](https://img.shields.com/badge/Render-Backend_Live-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://contractiq-deployment.onrender.com)
 
 ContractIQ Folder contains:
 
