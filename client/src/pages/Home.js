@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useUI } from "../context/UIContext";
+import { API_BASE } from "../config/api";
 import MetricsCard from "../components/MetricsCard";
 import ContractActivityChart from "../components/ContractActivityChart";
 import RiskDistributionChart from "../components/RiskDistributionChart";
