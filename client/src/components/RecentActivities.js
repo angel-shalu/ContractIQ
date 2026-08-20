@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FileText, Bell, ShieldCheck, CheckCircle, Clock } from "lucide-react";
 import { getAuthHeaders } from "../utils/auth";
+import { API_BASE } from "../config/api";
 
 const ICON_MAP = {
   contract: { Icon: FileText, colorClass: "color-blue" },
