@@ -6,7 +6,6 @@ export default function AIForecast() {
   const [summary, setSummary] = useState(null);
   const [predictions, setPredictions] = useState([]);
   const [alerts, setAlerts] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("all");
 
   useEffect(() => {
@@ -26,8 +25,6 @@ export default function AIForecast() {
         if (resAlert.ok) setAlerts(await resAlert.json());
       } catch (err) {
         console.warn("Forecast API offline:", err);
-      } finally {
-        setLoading(false);
       }
     }
     loadForecast();

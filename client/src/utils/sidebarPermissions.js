@@ -25,9 +25,9 @@ export const sidebarPermissions = {
   Employee: allSidebarModules,
 };
 
-const alwaysAllowedRoutes = new Set(["/profile", "/help"]);
+export const alwaysAllowedRoutes = new Set(["/profile", "/help"]);
 
-const routeAliases = {
+export const routeAliases = {
   "/contract-repository": "/repository",
 };
 
