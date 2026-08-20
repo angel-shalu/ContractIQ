@@ -38,7 +38,7 @@ export default function Home() {
     async function loadSummary() {
       try {
         const token = localStorage.getItem("token") || sessionStorage.getItem("token") || "";
-        const res = await fetch("/api/analytics/dashboard-summary", {
+        const res = await fetch(`${API_BASE}/analytics/dashboard-summary`, {
           headers: token ? { Authorization: `Bearer ${token}` } : {},
         });
         if (res.ok) {

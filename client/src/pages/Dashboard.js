@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useUI } from "../context/UIContext";
 import { FileIcon, AlertTriIcon, InfoIcon, RepeatIcon } from "../components/Icons";
+import { API_BASE } from "../config/api";
 
 function Kpi({ Icon, color, val, label, loading }) {
   return (
@@ -39,9 +40,9 @@ export default function Dashboard() {
     async function load() {
       try {
         const [cRes, oRes, rRes] = await Promise.allSettled([
-          fetch("/api/contracts", { headers }),
-          fetch("/api/obligations/", { headers }),
-          fetch("/api/renewals/", { headers }),
+          fetch(`${API_BASE}/contracts`, { headers }),
+          fetch(`${API_BASE}/obligations/`, { headers }),
+          fetch(`${API_BASE}/renewals/`, { headers }),
         ]);
 
         let contracts = [], obls = [], renewals = [];

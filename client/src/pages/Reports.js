@@ -48,22 +48,22 @@ export default function Reports() {
       let filename = `${templateId}_report_${new Date().toISOString().slice(0, 10)}.csv`;
 
       if (templateId === "obligations") {
-        const res = await fetch("/api/obligations/", { headers });
+        const res = await fetch(`${API_BASE}/obligations/`, { headers });
         const data = await res.json();
         csvContent = "ID,Title,Priority,Status,Due Date\n" + 
           (Array.isArray(data) ? data.map(o => `"${o.id}","${o.title}","${o.priority}","${o.status}","${o.due_date}"`).join("\n") : "");
       } else if (templateId === "contracts") {
-        const res = await fetch("/api/contracts/", { headers });
+        const res = await fetch(`${API_BASE}/contracts/`, { headers });
         const data = await res.json();
         csvContent = "ID,Contract Name,Vendor,Value,Status,End Date\n" + 
           (Array.isArray(data) ? data.map(c => `"${c.id}","${c.contract_name || c.name}","${c.vendor || ''}","${c.contract_value || c.value || ''}","${c.status}","${c.end_date || ''}"`).join("\n") : "");
       } else if (templateId === "audit") {
-        const res = await fetch("/api/audit/logs", { headers });
+        const res = await fetch(`${API_BASE}/audit/logs`, { headers });
         const data = await res.json();
         csvContent = "ID,Action,Module,Event Type,Description,Timestamp\n" + 
           (Array.isArray(data) ? data.map(a => `"${a.id}","${a.action}","${a.module}","${a.event_type || ''}","${a.description || ''}","${a.created_at || a.timestamp || ''}"`).join("\n") : "");
       } else {
-        const res = await fetch("/api/compliance/controls", { headers });
+        const res = await fetch(`${API_BASE}/compliance/controls`, { headers });
         const data = await res.json();
         csvContent = "ID,Control Title,Status,Weight,Last Verified\n" + 
           (Array.isArray(data) ? data.map(c => `"${c.id}","${c.title}","${c.status}","${c.weight}","${c.lastVerified || ''}"`).join("\n") : "");

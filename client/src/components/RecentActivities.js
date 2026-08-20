@@ -43,7 +43,7 @@ export default function RecentActivities() {
   useEffect(() => {
     async function load() {
       try {
-        const res = await fetch("/api/notifications", {
+        const res = await fetch(`${API_BASE}/notifications`, {
           headers: getAuthHeaders(),
         });
         if (res.ok) {

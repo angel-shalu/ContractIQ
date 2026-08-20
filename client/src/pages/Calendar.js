@@ -5,6 +5,7 @@ import Checkbox from "../components/Form/Checkbox";
 import FormSelect from "../components/Form/FormSelect";
 import { PlusIcon, ChevLeftIcon, ChevRightSmIcon } from "../components/Icons";
 import { getAuthHeaders } from "../utils/auth";
+import { API_BASE } from "../config/api";
 
 function pad2(n) { return n < 10 ? "0" + n : "" + n; }
 function dateKey(y, m, d) { return y + "-" + pad2(m) + "-" + pad2(d); }
@@ -30,7 +31,7 @@ export default function Calendar() {
   useEffect(() => {
     async function loadRenewals() {
       try {
-        const res = await fetch("/api/renewals/upcoming", {
+        const res = await fetch(`${API_BASE}/renewals/upcoming`, {
           headers: getAuthHeaders(),
         });
         if (!res.ok) return;

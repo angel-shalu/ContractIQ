@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Zap } from "lucide-react";
+import { API_BASE } from "../config/api";
 
 export default function SystemHealth() {
   const [health, setHealth] = useState({
@@ -12,7 +13,7 @@ export default function SystemHealth() {
   useEffect(() => {
     async function checkHealth() {
       try {
-        const res = await fetch("/api/health");
+        const res = await fetch(`${API_BASE}/health`);
         if (res.ok) {
           const data = await res.json();
           setHealth({

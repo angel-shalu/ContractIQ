@@ -149,7 +149,7 @@ export function UIProvider({ children }) {
       notificationRequestRef.current = controller;
 
       try {
-        const res = await fetch('/api/notifications', {
+        const res = await fetch(`${API_BASE}/notifications`, {
           headers: { Authorization: `Bearer ${token}` },
           signal: controller.signal,
         });
